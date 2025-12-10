@@ -16,9 +16,11 @@
 📦 Installation and Setup:
 1. Install Python Dependencies:
      Open your terminal or command prompt and run the following command to install the required Python libraries:
+
        Bash: pip install tkinter matplotlib mysql-connector-python
-2. Configure MySQL Database:
+3. Configure MySQL Database:
       You need to update the database credentials in the main() function of the Python script.Locate the following section in the code and replace the placeholder values with your actual MySQL         credentials:Pythondef main():
+   
         # === UPDATE THESE to match your MySQL credentials ===
             DB_HOST = 'localhost'
             DB_USER = 'root'
@@ -28,12 +30,12 @@
         # ... rest of the main function
 
    Note: The application is designed to automatically create the database (blood_bank_db) and all necessary tables (blood_inventory, donors, donations, patients, blood_requests) upon the first successful run.
-3. Run the Application:
+4. Run the Application:
        Execute the Python script:
-               Bash: python blood_bank_app.py
+
+       Bash: python blood_bank_app.py
 
 🖥️ Application Usage:
-
     The application opens with a four-tab interface:
     1. Donor ManagementEnter the Name, Blood Group, Age (must be between 18 and 65 for a donation), and Contact of the donor.Click Add Donor. This action registers the donor, records a donation,        increments their donation count, and updates the main Blood Inventory.
     2. Blood InventoryThis tab displays the current Units Available for all eight standard blood groups in a dynamic bar chart.Click Refresh Chart to update the visualization with the latest            data.
